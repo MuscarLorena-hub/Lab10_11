@@ -30,3 +30,17 @@ function alertCookieValue() {
   <button onclick="alertCookieValue()">Show cookie value
   </button>
 </body>
+
+<script> 
+function doOnce() {
+  if (!document.cookie.split('; ').find(row => row.startsWith('test2='))) {
+    alert("Do something here!");
+    document.cookie = "test2=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+  }
+}
+  </script>
+
+<body>
+  <button onclick="doOnce()">Only do something once</button>
+</body>
+
