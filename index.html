@@ -57,7 +57,7 @@ function doOnce() {
 
 </body>
 
-
+<script> 
 if (document.cookie.split(';').some(function(item) {
     return item.trim().indexOf('test') == 0
 })) {
@@ -69,8 +69,9 @@ if (document.cookie.split(';').some(function(item) {
 if (document.cookie.split(';').some((item) => item.trim().startsWith('test'))) {
     console.log('The cookie "test" exists (ES6)')
 }
+</script> 
 
-
+<script> 
 //ES5
 
 if (document.cookie.split(';').some(function(item) {
@@ -84,5 +85,5 @@ if (document.cookie.split(';').some(function(item) {
 if (document.cookie.split(';').some((item) => item.includes('test=1'))) {
     console.log('The cookie "test" has "1" for value')
 }
-
+</script> 
 
