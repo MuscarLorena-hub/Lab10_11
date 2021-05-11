@@ -13,7 +13,7 @@
 </body>
 
 <script> 
-document.cookie = "test1=1";
+document.cookie = "test1=Hello";
 document.cookie = "test2=World";
 
 const cookieValue = document.cookie
@@ -69,6 +69,7 @@ if (document.cookie.split(';').some(function(item) {
 if (document.cookie.split(';').some((item) => item.trim().startsWith('test2'))) {
     console.log('The cookie "test2" exists (ES6)')
 }
+
 
 
 
