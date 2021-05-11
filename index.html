@@ -59,30 +59,30 @@ function doOnce() {
 
 
 if (document.cookie.split(';').some(function(item) {
-    return item.trim().indexOf('test2') == 0
+    return item.trim().indexOf('test') == 0
 })) {
-    console.log('The cookie "test2" exists (ES5)')
+    console.log('The cookie "test" exists (ES5)')
 }
 
 //ES2016
 
-if (document.cookie.split(';').some((item) => item.trim().startsWith('test2'))) {
-    console.log('The cookie "test2" exists (ES6)')
+if (document.cookie.split(';').some((item) => item.trim().startsWith('test'))) {
+    console.log('The cookie "test" exists (ES6)')
 }
 
 
 //ES5
 
 if (document.cookie.split(';').some(function(item) {
-    return item.indexOf('reader=1') >= 0
+    return item.indexOf('test=1') >= 0
 })) {
-    console.log('The cookie "reader" has "1" for value')
+    console.log('The cookie "test" has "1" for value')
 }
 
 //ES2016
 
-if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
-    console.log('The cookie "reader" has "1" for value')
+if (document.cookie.split(';').some((item) => item.includes('test=1'))) {
+    console.log('The cookie "test" has "1" for value')
 }
 
 
