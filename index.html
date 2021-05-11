@@ -75,14 +75,14 @@ if (document.cookie.split(';').some((item) => item.trim().startsWith('test'))) {
 //ES5
 
 if (document.cookie.split(';').some(function(item) {
-    return item.indexOf('test=1') >= 0
+    return item.indexOf('test1=Hello') >= 0
 })) {
     console.log('The cookie "test" has "1" for value')
 }
 
 //ES2016
 
-if (document.cookie.split(';').some((item) => item.includes('test=1'))) {
+if (document.cookie.split(';').some((item) => item.includes('test1=Hello'))) {
     console.log('The cookie "test" has "1" for value')
 }
 </script> 
