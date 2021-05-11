@@ -72,15 +72,3 @@ if (document.cookie.split(';').some((item) => item.trim().startsWith('test2'))) 
 
 //ES5
 
-if (document.cookie.split(';').some(function(item) {
-    return item.indexOf('test1=1') >= 0
-})) {
-    console.log('The cookie "test1" has "1" for value')
-}
-
-//ES2016
-
-if (document.cookie.split(';').some((item) => item.includes('test1=1'))) {
-    console.log('The cookie "test1" has "1" for value')
-}
-
